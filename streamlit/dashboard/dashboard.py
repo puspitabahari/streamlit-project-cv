@@ -5,6 +5,7 @@ import plotly.express as px
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 import ast
+import os
 
 # ─────────────────────────────────────────────
 # PAGE CONFIG
@@ -102,10 +103,11 @@ button[data-baseweb="tab"] { font-size: 0.9rem !important; font-weight: 600 !imp
 # ─────────────────────────────────────────────
 @st.cache_data
 def load_data():
-    job      = pd.read_csv("job_clean.csv")
-    pontik   = pd.read_csv("pontik_enriched.csv")
-    cand     = pd.read_csv("resume_candidate_clean.csv")
-    job_req  = pd.read_csv("resume_job_req_clean.csv")
+    job      = os.path.join(current_dir, 'job_clean.csv')
+    pontik   = os.path.join(current_dir, "pontik_enriched.csv")
+    cand     = os.path.join(current_dir, "resume_candidate_clean.csv")
+    job_req  = os.path.join(current_dir, "resume_job_req_clean.csv")
+    
 
     # Parse skill_list column (stored as string repr of list)
     def parse_list_col(val):
