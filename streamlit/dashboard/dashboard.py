@@ -161,7 +161,7 @@ with st.sidebar:
     sel_match   = st.selectbox("Match Category", match_cats)
 
     st.markdown("---")
-    st.caption("📊 Sumber data: pontik_enriched · job_clean · resume_candidate_clean · resume_job_req_clean")
+    st.caption("Find Your Path")
     st.caption("🔍 5 Pertanyaan Bisnis DS/AI")
 
 
@@ -782,7 +782,7 @@ with tabs[4]:
 st.markdown("---")
 st.markdown(
     "<div style='text-align:center; color:#555; font-size:0.8rem;'>"
-    "DS/AI Job Market Dashboard · Data: job_clean · pontik_enriched · resume_candidate_clean · resume_job_req_clean"
+    "DS/AI Job Market Dashboard|Find Your Path"
     "</div>",
     unsafe_allow_html=True,
 )
