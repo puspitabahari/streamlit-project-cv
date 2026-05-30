@@ -162,7 +162,7 @@ with st.sidebar:
 
     st.markdown("---")
     st.caption("Find Your Path")
-    st.caption("🔍 5 Pertanyaan Bisnis DS/AI")
+   
 
 
 # ─────────────────────────────────────────────
