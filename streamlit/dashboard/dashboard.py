@@ -101,9 +101,8 @@ button[data-baseweb="tab"] { font-size: 0.9rem !important; font-weight: 600 !imp
 # ─────────────────────────────────────────────
 # DATA LOADING
 # ─────────────────────────────────────────────
-@st.cache_data
 current_dir = os.path.dirname(os.path.abspath(__file__))
-
+@st.cache_data
 def load_data():
     job_path      = os.path.join(current_dir, 'job_clean.csv')
     pontik_path   = os.path.join(current_dir, "pontik_enriched.csv")
