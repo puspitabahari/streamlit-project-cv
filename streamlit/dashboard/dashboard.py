@@ -117,9 +117,6 @@ def load_data():
     
     return job, pontik, cand, job_req
 
-df_job, df_pontik, df_cand, df_job_req = load_data()
-    
-
     # Parse skill_list column (stored as string repr of list)
     def parse_list_col(val):
         if pd.isna(val): return []
