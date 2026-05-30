@@ -102,11 +102,22 @@ button[data-baseweb="tab"] { font-size: 0.9rem !important; font-weight: 600 !imp
 # DATA LOADING
 # ─────────────────────────────────────────────
 @st.cache_data
+current_dir = os.path.dirname(os.path.abspath(__file__))
+
 def load_data():
-    job      = os.path.join(current_dir, 'job_clean.csv')
-    pontik   = os.path.join(current_dir, "pontik_enriched.csv")
-    cand     = os.path.join(current_dir, "resume_candidate_clean.csv")
-    job_req  = os.path.join(current_dir, "resume_job_req_clean.csv")
+    job_path      = os.path.join(current_dir, 'job_clean.csv')
+    pontik_path   = os.path.join(current_dir, "pontik_enriched.csv")
+    cand_path     = os.path.join(current_dir, "resume_candidate_clean.csv")
+    job_req_path  = os.path.join(current_dir, "resume_job_req_clean.csv")
+    
+    job      = pd.read_csv(job_path)
+    pontik   = pd.read_csv(pontik_path)
+    cand     = pd.read_csv(cand_path)
+    job_req  = pd.read_csv(job_req_path)
+    
+    return job, pontik, cand, job_req
+
+df_job, df_pontik, df_cand, df_job_req = load_data()
     
 
     # Parse skill_list column (stored as string repr of list)
